@@ -1,0 +1,172 @@
+@media (min-width:560px) {
+    //banner
+    .banner-image .content{
+        width: 300px;
+    }
+    //barra buscadora
+    #inputSearch{
+        width: 300px;
+    }
+
+    //portada
+    .about .row .image{
+        flex: 1 1 21rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    //contenedor productos
+    .menu .box-container .box img{
+        width: fit-content;
+        height: 350px;
+    }
+
+   
+    
+}
+
+
+@media (min-width:622px) {
+    //portada
+    .about .row .image{
+        flex: 1 1 23rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    
+
+}
+
+
+
+@media (min-width:690px) {
+    //portada
+    .about .row .image{
+        flex: 1 1 32rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    
+    //contenedor productos
+}
+
+@media (min-width:734px) {
+    //banner
+    .banner-image .content{
+        width: 500px;
+    }
+    //barra buscadora
+    #inputSearch{
+        width: 500px;
+    }
+    //portada
+    .about .row .image{
+        flex: 1 1 34rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    .menu .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem,2fr));
+        gap: 1.5rem;
+    }
+    //contenedor productos
+   
+}
+ @media (min-width:832px) {
+    //portada
+    .about .row .image{
+        flex: 1 1 32rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    .about .row .content {
+        flex: 1 1 19rem;
+        padding: 2rem;
+    }
+    .about .row .content h3 {
+        font-size: 1rem;
+    }
+    .about .row .content p {
+        font-size: 0.9rem;
+    }
+    .about .row .content .p-2 {
+        display: none;
+        font-size: 0.8rem;
+    }
+    //contenedor productos
+    .menu .box-container .box {
+        overflow-x: hidden;
+     }
+
+}
+ 
+@media (min-width:1024px) {
+    //banner
+    .banner-image .content{
+        width: 700px;
+    }
+    //barra buscadora
+    #inputSearch{
+        width: 700px;
+    }
+
+    //portada
+    .about .row .image{
+        flex: 1 1 34rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    .about .row .content .p-2 {
+        display: block;
+        font-size: 0.95rem;
+    }
+    .about .row .content p{
+        font-size: 0.95rem;
+    }
+    
+    .about .row .content h3{
+        font-size: 2rem; 
+    }
+     //contenedor productos
+   
+   
+    .menu .box-container .box {
+        overflow-x: hidden;
+     }
+   
+}
+
+@media (min-width:1060px) {
+    //portada
+    .about .row .image{
+        flex: 1 1 34rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    .about .row .content .p-2 {
+        display: block;
+        font-size: 1rem;
+    }
+    .about .row .content p{
+        font-size: 1rem;
+    }
+    
+    .about .row .content h3{
+        font-size: 2rem; 
+    }
+    .about{
+        margin-left: 3rem ;
+        margin-right: 3rem;
+    }
+    //contenedor productos
+}
+
+
+
