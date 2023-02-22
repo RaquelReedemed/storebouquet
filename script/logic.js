@@ -93,10 +93,11 @@ const dataProductos = [
 let data = []
 //guardar en el localStorage
 if (localStorage.getItem('data')) {
-    data = JSON.parse(localStorage.getItem('data'));
+    data = JSON.parse(localStorage.getItem('data'));//guarda en formato json en el localStorage
 } else {
     data = dataProductos;
 } 
+
 
  const contenedor = document.querySelector('.box-container');
 
@@ -113,11 +114,23 @@ const dibujarProductos = (data, contenedor ) => {
         `
     });
     contenedor.innerHTML = acumulador;
+   //setItem(key, value), 
+    localStorage.setItem('data',JSON.stringify(data))//JSON.stringify(), convierte los datos en json
 };
 
 dibujarProductos(data, contenedor) 
 
+//Recuperando del storage
 
+if (localStorage.getItem ('data')) {
+    const consultasViejas = JSON.parse(localStorage.getItem('data'));
+ 
+    consultasViejas.forEach( (el) => {
+         (el.id, el.nombre, el.cantidad, el.imagen, el.precio);
+         console.log(consultasViejas);
+     })
+     dibujarProductos(consultasViejas,contenedor)
+ }
 
 
 

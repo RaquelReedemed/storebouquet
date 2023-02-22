@@ -1,0 +1,9 @@
+1-creacion del navbar con bootstrap, css y JavaScript. El mismo se oscurece cuando se genera un scroll vertical en la pantalla, es decir, se agrega un evento de desplazamiento (scroll) utilizando el metodo addEventListener.
+
+2-creacion de barra buscadora, se uso css para estilos. Al hacer 'scroll' se posiciona en el navbar dentro de un 'div'. Para lograrlo se creo un segundo 'search' la cual se la da posicionamiento y desplega lista de opciones al activarse el envento 'keyup' al usuario precionar y soltar dentro del input, con la propiedad 'target.value' se obtiene el valor del campo.
+
+3-dibujar data en el DOM, utilizando un 'querySelector'. Se pudo acceder al elemento html a partir del array 'data' la cual es recorrida por un forEach, se acumulan todas las cadenas del objeto y  el contenido se inserta en el 'contenedor' utilizando un 'innerHTML'.
+
+4-localStorage, con un 'setItem' se almacenan los datos en formato JSON, luego con el 'getItem' comprueba primero si hay algun dato almacenado en el storage y si es verddero convierte la cadena de texto (JSON) en un objeto JavaScript para que pueda ser leida por el navegador.
+
+5-Portada, contenedor de productos, se le aplicaron mediasqueries respectivas para el responsive.
