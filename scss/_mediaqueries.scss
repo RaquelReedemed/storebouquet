@@ -15,21 +15,35 @@
                         //45rem:tama;o inicial 45 rem
                       
     }
-    //contenedor productos
-    .menu .box-container .box img{
-        width: fit-content;
-        height: 350px;
-    }
 
-   
-    
 }
 
+@media (min-width:501px) {
+//portada
+.about .row .image{
+    flex: 1 1 19rem;//1:crecera lo necesario para llenar el contenedor
+                    //1:se encongera necesario hasta ajustarse al contenedor
+                    //45rem:tama;o inicial 45 rem
+                  
+}
+}
 
 @media (min-width:622px) {
     //portada
     .about .row .image{
         flex: 1 1 23rem;//1:crecera lo necesario para llenar el contenedor
+                        //1:se encongera necesario hasta ajustarse al contenedor
+                        //45rem:tama;o inicial 45 rem
+                      
+    }
+    
+
+}
+
+@media (min-width:676px) {
+    //portada
+    .about .row .image{
+        flex: 1 1 26rem;//1:crecera lo necesario para llenar el contenedor
                         //1:se encongera necesario hasta ajustarse al contenedor
                         //45rem:tama;o inicial 45 rem
                       
@@ -70,7 +84,7 @@
     }
     .menu .box-container{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem,2fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem,2fr));
         gap: 1.5rem;
     }
     //contenedor productos
@@ -79,7 +93,7 @@
  @media (min-width:832px) {
     //portada
     .about .row .image{
-        flex: 1 1 32rem;//1:crecera lo necesario para llenar el contenedor
+        flex: 1 1 30rem;//1:crecera lo necesario para llenar el contenedor
                         //1:se encongera necesario hasta ajustarse al contenedor
                         //45rem:tama;o inicial 45 rem
                       
@@ -99,10 +113,18 @@
         font-size: 0.8rem;
     }
     //contenedor productos
+    /* .menu .box-container .box {
+        overflow-x: hidden;
+     } */
+
+}
+
+
+@media (min-width:1021) {
+    //contenedor productos
     .menu .box-container .box {
         overflow-x: hidden;
-     }
-
+     } 
 }
  
 @media (min-width:1024px) {
@@ -136,10 +158,10 @@
      //contenedor productos
    
    
-    .menu .box-container .box {
+    /* .menu .box-container .box {
         overflow-x: hidden;
      }
-   
+    */
 }
 
 @media (min-width:1060px) {

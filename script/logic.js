@@ -109,7 +109,7 @@ const dibujarProductos = (data, contenedor ) => {
         <img src="${element.imagen}" alt="img">
         <h3>${element.nombre}</h3>
         <div class="price">${element.precio}</div>
-        <a href="#" class="btn">add to car</a>
+        <a href="#"<i class="fal fa-shopping-cart cart"></i></a>
     </div>
         `
     });

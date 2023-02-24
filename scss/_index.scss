@@ -4,7 +4,24 @@
     height: 15rem;
 }
 
+//carrito en nav
+#lg-bag{
+    display: block;
+}
 
+//carrito dnetro de menu hamburgueza
+#mobile a{
+    margin-left: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-nav{
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+}
 
 .navbar-collapse {
     background-color: #f5d7e1;
@@ -13,21 +30,51 @@
     margin-right: 60px;
 }  
 
+.nav-item {
+    padding: 0 20px;
+    
+}
 
 
 .nav-item a {
     margin-left: 10px;
     padding-bottom: 10px;
+    color: #2a2a2a;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
+
+.nav-item a:hover,
+.nav-item a.active {
+    color: #d24675;
+}
+
+//para hacer linea horizontal, se be colocar position:relative en nav-item
+/* .nav-item a.active::after,
+.nav-item a:hover::after{
+  //agregar linea hotizontal
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:black;
+    position: absolute;
+    bottom:-4px;
+    left: 20px;
+} */
+
 
 
 //Eliminado focus de boostrap
-#menu:focus {
+#menuHamb:focus {
     box-shadow: none;
 }
 //hamburgueza
 .navbar-toggler {
     margin-bottom: 5px;
+    display: inherit;
 }
   
 
@@ -207,7 +254,6 @@
 */
 
 
-
 .menu{
     margin-left: 10px;
     margin-right: 10px;
@@ -222,13 +268,20 @@
 .menu .box-container .box {
    // padding: 5rem;
     text-align: center;
-    border: var(--border); //ver
-  //  display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   border: 1px solid #c3c0c0 ;
+   border-radius: 10px;
+   position: relative;
 }
 
 .menu .box-container .box img{
     width: 18rem;
    height: 0 auto;
+   border-radius: 10px;
+   margin-top: 10px;
 }
 
 .menu .box-container .box h3{
@@ -252,4 +305,18 @@
 .menu .box-container .box:hover > *{//elementos que descienden de box
     color: #fff;
 }
+
+    //boton carrito
+.cart{
+   width: 40px; 
+   height: 40px;
+   line-height: 40px;
+   border-radius: 50px;
+   font-weight: 500;
+   color: #d24675;
+   border: 1px solid #cce7d0;
+   position: absolute;
+   bottom: 20px;
+   right: 10px;
+}    
 

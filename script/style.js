@@ -17,7 +17,7 @@ window.addEventListener('scroll', function(){
  //Estilos barra de busqueda
 const bar = document.getElementById('ctn-bars-search2');
 const search2 = document.getElementById('box-search2');
-const menu = document.getElementById('menu')
+
 
 //const inputSearch2 = document.getElementById('inputSearch2');
 
@@ -35,9 +35,40 @@ window.onscroll= function() {
         bar.style.display = 'none';
         search2.classList.remove('box-search2')
         
-    }
+    }    
+}
 
-    /* const resize = () => {
+// funcion para que el carrito desaparezca del listado cuando se le de click al menu hamburgueza
+const menuHamb = document.getElementById('menuHamb')
+const carMenu = document.getElementById('lg-bag')
+
+const logoCar = () => {
+if(menu) {
+      carMenu.style.display = 'none' 
+}
+}
+addEventListener('click',logoCar)
+
+//mediaqueries para que aparezca el carrito cuando se va el menu hamburgueza
+
+const resize = () => {
+   if(innerWidth > 991) {
+    carMenu.style.display = 'block'
+   }
+}
+addEventListener('resize', resize) 
+addEventListener('DOMContentLoaded', resize)
+
+
+
+
+
+
+
+
+//mediasqueries
+  
+/* const resize = () => {
         if (innerWidth > 600) {
          bar.style.left = '30%';
         } else {
@@ -85,14 +116,6 @@ window.onscroll= function() {
     changeSize3(mediumBp3)
 
      */
-    
-}
-
-//mediasqueries
-  
-
-
-
 
 
 

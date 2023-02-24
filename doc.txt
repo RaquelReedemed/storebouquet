@@ -7,3 +7,7 @@
 4-localStorage, con un 'setItem' se almacenan los datos en formato JSON, luego con el 'getItem' comprueba primero si hay algun dato almacenado en el storage y si es verddero convierte la cadena de texto (JSON) en un objeto JavaScript para que pueda ser leida por el navegador.
 
 5-Portada, contenedor de productos, se le aplicaron mediasqueries respectivas para el responsive.
+
+6-Logo car:
+    -Contenido Productos, se aplico estilo y 'position:absolute' para que se posiciones siempre en la parte inferior derecha del .box a la cual se le asigno 'position: relative' para que el icono tome de referencia y se posicione.
+    -Dentro del Nav, varia comportamiento del icono llamando a un evento 'click' para que desaparezca cuando del menu cuando esta en modo 'hamburgueza', una vez que aumenta la medida de la pantalla este aprecera en el menu de opciones haciendo uso del evento 'resize' el cual se activara cuando el tama;o de pantalla sea <991.
