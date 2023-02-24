@@ -265,7 +265,7 @@
     gap: 1.5rem;
 }
 
-.menu .box-container .box {
+.menu .box-container .boxProd {
    // padding: 5rem;
     text-align: center;
     display: flex;
@@ -277,20 +277,20 @@
    position: relative;
 }
 
-.menu .box-container .box img{
+.menu .box-container .boxProd img{
     width: 18rem;
    height: 0 auto;
    border-radius: 10px;
    margin-top: 10px;
 }
 
-.menu .box-container .box h3{
+.menu .box-container .boxProd h3{
     color: #2a2a2a;
     font-size: 1rem;
     padding: 1rem 0;
 }
 
-.menu .box-container .box .price{
+.menu .box-container .boxProd .price{
     color: #2a2a2a;
     font-size: 1rem;
     padding: .5rem 0;
@@ -298,11 +298,11 @@
 
 
 
-.menu .box-container .box:hover{
+.menu .box-container .boxProd:hover{
     background: #e8b4b4;
 }
 
-.menu .box-container .box:hover > *{//elementos que descienden de box
+.menu .box-container .boxProd:hover > *{//elementos que descienden de box
     color: #fff;
 }
 

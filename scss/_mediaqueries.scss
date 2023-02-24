@@ -12,10 +12,9 @@
     .about .row .image{
         flex: 1 1 21rem;//1:crecera lo necesario para llenar el contenedor
                         //1:se encongera necesario hasta ajustarse al contenedor
-                        //45rem:tama;o inicial 45 rem
+                        //21rem:tama;o inicial 21 rem
                       
     }
-
 }
 
 @media (min-width:501px) {
@@ -122,7 +121,7 @@
 
 @media (min-width:1021) {
     //contenedor productos
-    .menu .box-container .box {
+    .menu .box-container .boxProd {
         overflow-x: hidden;
      } 
 }
@@ -188,6 +187,35 @@
         margin-right: 3rem;
     }
     //contenedor productos
+}
+
+//Medias queries para class .section-p1
+
+@media (max-width:799px) {
+    .section-p1{
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 477px){
+    .section-p1{
+        padding: 20px;
+    }
+
+    //cart page
+  #cart-add {
+    
+    flex-direction: column ;
+    
+  }  
+
+  #coupon{
+    width: 100%;
+  }
+  #subtotal{
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 

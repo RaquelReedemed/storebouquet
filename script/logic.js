@@ -105,7 +105,7 @@ const dibujarProductos = (data, contenedor ) => {
     let acumulador = '';
     data.forEach(element => {
         acumulador += `
-        <div class="box" >
+        <div class="boxProd" >
         <img src="${element.imagen}" alt="img">
         <h3>${element.nombre}</h3>
         <div class="price">${element.precio}</div>
@@ -156,7 +156,6 @@ inputSearch2 = document.getElementById('inputSearch2');
   filter = inputSearch.value.toUpperCase();
   //li sera igual a los li que se obtiene del getelementbytagname
   li = box_search.getElementsByTagName("li") //
-
   //recorriendo elementos a filtrar mediante los "li"
   for (i = 0; i < li.length; i++){ //i arranca en 0, si i es menor a la longitud del objeto li el bucle incrementara 1 e interara atraves de todos los elementos de li
 
