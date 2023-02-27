@@ -40,7 +40,7 @@ window.onscroll= function() {
 
 // funcion para que el carrito desaparezca del listado cuando se le de click al menu hamburgueza
 const menuHamb = document.getElementById('menuHamb')
-const carMenu = document.getElementById('lg-bag')
+const carMenu = document.getElementById('mobile')
 
 const logoCar = () => {
 if(menu) {
@@ -57,10 +57,33 @@ const resize = () => {
    }
 }
 addEventListener('resize', resize) 
-addEventListener('DOMContentLoaded', resize)
+//addEventListener('DOMContentLoaded', resize)
 
+/* carMenu.addEventListener('click', () => {
+    if(carrito.length === 0) {
+        Swal.fire({
+            title: "Tu carrito esta vacio"
+        })
+}
+else {
+    location.href = "cart.html"
+}
+}); */
 
+/* const bag = document.getElementById('lg-bag')
 
+bag.addEventListener('click', () => {
+    if(carrito.length === 0) {
+        Swal.fire({
+            title: "Tu carrito esta vacio"
+        })
+        
+}
+else {
+    location.href = "cart.html"
+}console.log(carrito)
+});
+ */
 
 
 

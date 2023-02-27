@@ -99,7 +99,10 @@ if (localStorage.getItem('data')) {
 } 
 
 
+
+
  const contenedor = document.querySelector('.box-container');
+
 
 const dibujarProductos = (data, contenedor ) => {
     let acumulador = '';
@@ -109,7 +112,7 @@ const dibujarProductos = (data, contenedor ) => {
         <img src="${element.imagen}" alt="img">
         <h3>${element.nombre}</h3>
         <div class="price">${element.precio}</div>
-        <a href="#"<i class="fal fa-shopping-cart cart"></i></a>
+        <a  href="#" onclick="agregarAlCarrito(${element.id})"  <i class="fal fa-shopping-cart cart"></i></a>
     </div>
         `
     });
@@ -120,7 +123,11 @@ const dibujarProductos = (data, contenedor ) => {
 
 dibujarProductos(data, contenedor) 
 
-//Recuperando del storage
+
+
+
+ //recuperando del storage
+
 
 if (localStorage.getItem ('data')) {
     const consultasViejas = JSON.parse(localStorage.getItem('data'));
@@ -131,6 +138,8 @@ if (localStorage.getItem ('data')) {
      })
      dibujarProductos(consultasViejas,contenedor)
  }
+
+
 
 
 
@@ -206,3 +215,8 @@ inputSearch2 = document.getElementById('inputSearch2');
       }
   }
    });
+
+
+
+
+
