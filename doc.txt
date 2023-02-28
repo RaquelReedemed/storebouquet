@@ -11,8 +11,19 @@
 
 6-contenedor de productos, se hizo uso de la propiedad 'grid' el cual organizara los elementos dentro del contenedor en cuadricula donde haciendo uso de 'grid-template-culums', 'repeat();, 'auto-fit' y 'gap' las columnasse adaptan al ancho del contendor (dentro imagen y texto) por lo tanto la imagen no se desborda ni se desfigura. Se aplicaron mediasqueries respectivas para el responsive.
 
-
-
 7-Logo car:
     -Contenido Productos, se aplico estilo y 'position:absolute' para que se posiciones siempre en la parte inferior derecha del .box a la cual se le asigno 'position: relative' para que el icono tome de referencia y se posicione.
     -Dentro del Nav, varia comportamiento del icono llamando a un evento 'click' para que desaparezca cuando del menu cuando esta en modo 'hamburgueza', una vez que aumenta la medida de la pantalla este aprecera en el menu de opciones haciendo uso del evento 'resize' el cual se activara cuando el tama;o de pantalla sea <991.
+
+8- Renderizacion de productos en la cart.html donde se hizo uso de DOMContentLoaded y JSON para que se guarden cuando se resetea la pagina (index y cart).
+
+9-Funcion eliminar producto, donde se recibio por parametro 'productoid', donde al darle click el usuario sucede lo siguiente:
+    1-findIndex:Devuelve el indide del 1er elemento a eliminar.
+    2-carrito[item].cantidad--,el producto devuelvo por cada click restara una cantidad
+    3-if (carrito[item].cantidad === 0), cuando el producto llegue a CERO cantidad:
+    4-const nuevaLista = carrito.filter( (producto) => producto.id !== productoid), este sera filtrado para sacarlo de la lista y se creara un nuevo array carrito = nuevaLista.
+
+10-Funcion actualizar total, calcula y muestra el costo total del carrito de compras. Se utilizo el metodo 'reduce' que va sumando el precio total de cada producto (precio*cant) y se almacena en la VARIABLE 'acc' la cual arranca en CERO, al final el ciclo devuelve el costo toal de todos los productos.
+
+
+    

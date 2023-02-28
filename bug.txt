@@ -1,0 +1,17 @@
+27-02
+1-En el index.html solo reconoce que existe producto en el carrito cuando se agrega en el momento, una vez que se va a la pag de carrito 'carrito' vuelve a creo. 
+   Resuelto con 'DOMContentLoaded'
+
+29-02
+1-Error en consola por posible "dependencia circular" ya que los archivos .js dependen uno del otro. Una posible solucion seria la "inyeccion de dependencias".
+
+
+
+
+
+FALTA TERMINAR:
+1-Contenedor barra responsive.
+2-Icono bag ya que desaparece cuando se le da click.
+3-Hacer footer,
+4-Hacer pag contacto.
+5-Hacer Upload.
