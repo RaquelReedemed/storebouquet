@@ -14,10 +14,11 @@
  //se guardaran los productos para luego dibujar
  let carrito = [];
 
+
  //constante
- 
- 
  const contenedorCarrito = document.getElementById('contenedor-carrito');
+ const total = document.getElementById('subtotal');
+
 
  document.addEventListener('DOMContentLoaded', () => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || []
@@ -26,8 +27,6 @@
 
 
  //despues de click en COMPRAR se agregan los prod al carrito 
-
- 
  const agregarAlCarrito = (id) => {
   
     
@@ -63,7 +62,7 @@ actualizarTotal()
 }
 
 
-
+//renderizar productos
 const listarCarrito = (carrito) => {
     
     console.log('vacio')
@@ -77,7 +76,7 @@ const listarCarrito = (carrito) => {
     carrito.forEach((producto) => {
         acumulador += `
         <tr>
-           <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+           <td><a href="#" onclick="eliminarProducto(${producto.id})"><i class="far fa-times-circle"></i></a></td>
            <td><img src="${producto.imagen}" alt="img" alt=""></td>
            <td>${producto.nombre}</td>
            <td>$${producto.precio}</td>
@@ -96,6 +95,57 @@ const listarCarrito = (carrito) => {
 
 listarCarrito(carrito);
 
+//eliminar producto, el parametro productoid identifica el producto q se desea ELIMINAR
+const eliminarProducto = (productoid) => {
+    const item = carrito.findIndex((producto) => producto.id === productoid)//se busca el indice, devuelve el indice del 1er elemento q cumple con la condicion callback
+    console.log(item)
+    carrito[item].cantidad--;//disminuye la cant del producto encontrado en el carrito de uno en uno (--) , de acuedro a la cantidad del mismo. (flor#4 * 2--)
+    console.log(carrito)
+    if (carrito[item].cantidad === 0) { //si la cantidad del producto se ha reducido a CERO cuando el usuario ha eliminado, el carrito se filtra y se crea una nueva lista sin el producto con cant CERO.
+    const nuevaLista = carrito.filter( (producto) => producto.id !== productoid)
+    carrito = nuevaLista;
+    console.log(carrito)
+}
+Swal.fire({
+    position: 'top-end',
+    icon: 'error',
+    title: 'Se a eliminado del carrito',
+    showConfirmButton: false,
+    timer: 1500
+  })
+
+listarCarrito(carrito);
+actualizarTotal();
+//actualizarNumerito() 
+localStorage.setItem('carrito', JSON.stringify(carrito));
+    
+} 
+
+
+//calculando total del monto a pagar, metodo reduce() itera a traves de cada elemento en la matriz carrito y realiza un calculo en el
+function actualizarTotal() {
+    const totalCalculado = carrito.reduce( (acc, producto) => acc + (producto.precio * producto.cantidad), 0);  //la multiplicacion se a;ade al acc que es el costo totald e todos los produc.
+    total.innerHTML = `
+    <h3>Cart Totals</h3>
+    <table>
+        <tr>
+            <td>Cart Subtotal</td>
+            <td>$ ${totalCalculado}</td>
+        </tr>
+        <tr>
+            <td>Shipping</td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td><strong>Title</strong></td>
+            <td><strong>$ ${totalCalculado}</strong></td>
+        </tr>
+    </table>
+    <button class="normal" >Proceed to checkout</button>`
+}
+
+
+
 
  //recuperando del storage
 
@@ -103,7 +153,7 @@ if (localStorage.getItem('carrito')) {  //comprueba si hay una clave llamada 'ca
     //json.parse(), transforma de cadena a objetoJS y dicho objeto se asignara a 'carrito'
     carrito = JSON.parse(localStorage.getItem('carrito'));
     listarCarrito(carrito)
-  //  actualizarTotal()
+   actualizarTotal()
 }
 
 

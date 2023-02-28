@@ -47,7 +47,7 @@ if(menu) {
       carMenu.style.display = 'none' 
 }
 }
-addEventListener('click',logoCar)
+addEventListener('click',logoCar) 
 
 //mediaqueries para que aparezca el carrito cuando se va el menu hamburgueza
 
