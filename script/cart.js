@@ -16,61 +16,62 @@
 
  //constante
  
+ 
  const contenedorCarrito = document.getElementById('contenedor-carrito');
 
  document.addEventListener('DOMContentLoaded', () => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || []
-    listarCarrito()
+    listarCarrito(carrito)
  })
 
 
  //despues de click en COMPRAR se agregan los prod al carrito 
 
  
-const agregarAlCarrito = (id) => {
+ const agregarAlCarrito = (id) => {
   
     
-        //busca elemento id que debe ser igual a al valor de la variable id
-    const producto = data.find(el => el.id === id)
-    
-    if (producto) {
+    //busca elemento id que debe ser igual a al valor de la variable id
+const producto = data.find(el => el.id === id)
 
-        const productoCarrito = new Carrito(producto.id, producto.nombre, 1, producto.precio, producto.imagen); 
+if (producto) {
 
-        if (carrito.some(el => el.id === id)) {
-            const target = carrito.find(el => el.id === id);
-            carrito = carrito.filter(el => el.id !== id);
+    const productoCarrito = new Carrito(producto.id, producto.nombre, 1, producto.precio, producto.imagen); 
 
-            const nuevoProducto = new Carrito(target.id, target.nombre, target.cantidad + 1, target.precio, target.imagen);
-            carrito.push(nuevoProducto)
-        } else {
-            carrito.push(productoCarrito);
-        }
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Se a añadido al carrito',
-            showConfirmButton: false,
-            timer: 1500,
-          })
+    if (carrito.some(el => el.id === id)) {
+        const target = carrito.find(el => el.id === id);
+        carrito = carrito.filter(el => el.id !== id);
+
+        const nuevoProducto = new Carrito(target.id, target.nombre, target.cantidad + 1, target.precio, target.imagen);
+        carrito.push(nuevoProducto)
+    } else {
+        carrito.push(productoCarrito);
     }
-      
-    console.log(carrito)
-    localStorage.setItem('carrito', JSON.stringify(carrito)); //localStorage.setItem() metodo para almacenar en el navegador como una cadeja JSON. 'JSON.stringify(carrito) se utiliza para convertir el objeto JS en JSON
-    listarCarrito(carrito)
-    actualizarTotal()
-    }
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Se a añadido al carrito',
+        showConfirmButton: false,
+        timer: 1500,
+      })
+}
+  
+console.log(carrito)
+localStorage.setItem('carrito', JSON.stringify(carrito)); //localStorage.setItem() metodo para almacenar en el navegador como una cadeja JSON. 'JSON.stringify(carrito) se utiliza para convertir el objeto JS en JSON
+listarCarrito(carrito)
+actualizarTotal()
+}
 
 
 
 const listarCarrito = (carrito) => {
     
     console.log('vacio')
-    if(carrito.length === 0) {
+   /*  if(carrito.length === 0) {
         contenedorCarrito.innerText = "carrito vacio"
         console.log('carrito vacio')
         return;  
-    }
+    } */
     let acumulador = '';
 
     carrito.forEach((producto) => {
@@ -80,8 +81,8 @@ const listarCarrito = (carrito) => {
            <td><img src="${producto.imagen}" alt="img" alt=""></td>
            <td>${producto.nombre}</td>
            <td>$${producto.precio}</td>
-           <td><input type="number" value="1"></td>
-           <td>$118.19</td>
+           <td>${producto.cantidad}</td>
+           <td>$${producto.total}</td>
         </tr>
         `
 
@@ -91,6 +92,7 @@ const listarCarrito = (carrito) => {
    // actualizarNumerito() 
     
 };
+//<td><input type="number" value="1"></td>
 
 listarCarrito(carrito);
 

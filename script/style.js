@@ -59,7 +59,7 @@ const resize = () => {
 addEventListener('resize', resize) 
 //addEventListener('DOMContentLoaded', resize)
 
-/* carMenu.addEventListener('click', () => {
+carMenu.addEventListener('click', () => {
     if(carrito.length === 0) {
         Swal.fire({
             title: "Tu carrito esta vacio"
@@ -68,9 +68,9 @@ addEventListener('resize', resize)
 else {
     location.href = "cart.html"
 }
-}); */
+}); 
 
-/* const bag = document.getElementById('lg-bag')
+const bag = document.getElementById('lg-bag')
 
 bag.addEventListener('click', () => {
     if(carrito.length === 0) {
@@ -83,7 +83,7 @@ else {
     location.href = "cart.html"
 }console.log(carrito)
 });
- */
+
 
 
 
